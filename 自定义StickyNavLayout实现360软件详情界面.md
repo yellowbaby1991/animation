@@ -504,4 +504,8 @@ public class MainActivity extends FragmentActivity {
     }
 }
 ```
+#### 效果
+![enter description here][1]
 
+
+  [1]: ./images/%E8%87%AA%E5%AE%9A%E4%B9%89StickNavLayout%E5%AE%9E%E7%8E%B0360%E8%BD%AF%E4%BB%B6%E8%AF%A6%E6%83%85%E7%95%8C%E9%9D%A2.gif "自定义StickNavLayout实现360软件详情界面"
