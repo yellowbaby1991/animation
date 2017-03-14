@@ -505,3 +505,7 @@ public class MainActivity extends FragmentActivity {
 }
 ```
 #### 效果
+![enter description here][1]
+
+
+  [1]: ./images/%E8%87%AA%E5%AE%9A%E4%B9%89360%E8%BD%AF%E4%BB%B6%E7%95%8C%E9%9D%A2.gif "自定义360软件界面"
