@@ -26,8 +26,8 @@
 		}
 		```
 	2. 整体使用一个自定义的ViewPager，使用自定义主要是为了计算滑动速度
-``` java
-enter code here
-```
+		``` java
+		enter code here
+		```
 
 
