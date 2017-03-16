@@ -3,8 +3,8 @@
 
  - 底部名片
 	1. 整体使用一个自定义的ViewPager，使用自定义主要是为了计算滑动速度
-		``` java
-		public class CustomViewPager extends ViewPager {
+``` java
+public class CustomViewPager extends ViewPager {
 		...
 		public boolean dispatchTouchEvent(MotionEvent ev) {
         float x = ev.getX();
@@ -24,7 +24,8 @@
     }
 		...
 		}
-		```
+```
+
 	2. 设置clipChildren属性使得可以在一页显示多个page
 		``` java
 		enter code here
