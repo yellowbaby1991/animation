@@ -46,6 +46,12 @@ public class CustomViewPager extends ViewPager {
     <solid android:color="#aaEBEBEB"></solid>
 </shape>
 ```
+	4. 自定义PagerAdapter来显示名片细节
+	
+
+``` stylus
+enter code here
+```
 
 
 
