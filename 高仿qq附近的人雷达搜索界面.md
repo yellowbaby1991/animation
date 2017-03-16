@@ -264,5 +264,17 @@ private void drawCenterIcon(Canvas canvas) {
  1. 点击雷达联动名片
 
 ``` java
-enter code here
+protected void onLayout(boolean changed, int l, int t, int r, int b) {
+        ...
+            child.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    resetAnim(currentShowChild);
+                    currentShowChild = (CircleView) child;
+                    startAnim(currentShowChild, j - 1);
+                    iRadarClickListener.onRadarItemClick(j - 1);
+                }
+            });
+        }
+    }
 ```
