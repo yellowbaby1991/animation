@@ -124,4 +124,12 @@ class ViewPagerAdapter extends PagerAdapter {
 
  2. 然后画阴影
  
- 
+``` java
+private void drawScan(Canvas canvas) {
+        canvas.save();//使用save和restore来避免对其他部件的影响
+        mPaintScan.setShader(scanShader);
+        canvas.concat(matrix);
+        canvas.drawCircle(mWidth / 2, mHeight / 2, mWidth * circleProportion[4], mPaintScan);
+        canvas.restore();
+    }
+```
