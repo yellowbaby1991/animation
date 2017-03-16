@@ -228,4 +228,5 @@ private void drawCenterIcon(Canvas canvas) {
         requestLayout();
     }
 ```
- 3. 1
+ 3. 扫描完所有的点后优先显示距离最近的点，通过设置缩放度来突出小圆圈
+ 4. 
