@@ -126,8 +126,14 @@ class ViewPagerAdapter extends PagerAdapter {
  
 ``` java
 
+private void init() {
+       ...
 scanShader = new SweepGradient(mWidth / 2, mHeight / 2,
                 new int[]{Color.TRANSPARENT, Color.parseColor("#84B5CA")}, null);
+        mPaintScan = new Paint();
+        mPaintScan.setStyle(Paint.Style.FILL_AND_STROKE);
+    }
+
 
 private void drawScan(Canvas canvas) {
         canvas.save();//使用save和restore来避免对其他部件的影响
