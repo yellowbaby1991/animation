@@ -4,7 +4,10 @@
  - 底部名片
 	1. 整体使用一个自定义的ViewPager，主要是为了计算滑动速度
 		``` java
-		enter code here
+		public class CustomViewPager extends ViewPager {
+		
+		
+		}
 		```
 
 
