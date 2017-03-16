@@ -39,6 +39,6 @@ public class CustomViewPager extends ViewPager {
 	android:clipChildren="false"></yellow.com.qqnearby.view.CustomViewPager>
 ```
 3. 自定义PagerAdapter显示每页具体的内容
-4. 
+
 
 
