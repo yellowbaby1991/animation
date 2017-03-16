@@ -125,6 +125,10 @@ class ViewPagerAdapter extends PagerAdapter {
  2. 然后画阴影
  
 ``` java
+
+scanShader = new SweepGradient(mWidth / 2, mHeight / 2,
+                new int[]{Color.TRANSPARENT, Color.parseColor("#84B5CA")}, null);
+
 private void drawScan(Canvas canvas) {
         canvas.save();//使用save和restore来避免对其他部件的影响
         mPaintScan.setShader(scanShader);
