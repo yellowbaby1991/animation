@@ -39,6 +39,13 @@ public class CustomViewPager extends ViewPager {
 	android:clipChildren="false"></yellow.com.qqnearby.view.CustomViewPager>
 ```
 3. 使用shape-drawable作为背景来显示圆角名片
+``` xml
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="5dp"></corners>
+    <solid android:color="#aaEBEBEB"></solid>
+</shape>
+```
 
 
 
