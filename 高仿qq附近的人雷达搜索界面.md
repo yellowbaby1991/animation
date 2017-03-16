@@ -111,6 +111,8 @@ class ViewPagerAdapter extends PagerAdapter {
         canvas.drawCircle(mWidth / 2, mHeight / 2, mWidth * circleProportion[4], mPaintLine);
         canvas.drawCircle(mWidth / 2, mHeight / 2, mWidth * circleProportion[5], mPaintLine);
     }
+	
+	
 ```
 
 
