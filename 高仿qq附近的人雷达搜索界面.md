@@ -100,4 +100,5 @@ class ViewPagerAdapter extends PagerAdapter {
 
 ##### 雷达界面
 
- 1. 
+ 1. 先画最外圈的5个白色线圈
+ 2. 
