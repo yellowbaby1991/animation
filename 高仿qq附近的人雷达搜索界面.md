@@ -38,7 +38,8 @@ public class CustomViewPager extends ViewPager {
 	android:layout_marginRight="120dp"
 	android:clipChildren="false"></yellow.com.qqnearby.view.CustomViewPager>
 ```
-3. 自定义PagerAdapter显示每页具体的内容
+3. 使用shape-drawable来显示圆角名片
+4. 
 
 
 
