@@ -122,4 +122,6 @@ class ViewPagerAdapter extends PagerAdapter {
     }
 ```
 
- 2. 
+ 2. 然后画阴影
+ 
+ 
