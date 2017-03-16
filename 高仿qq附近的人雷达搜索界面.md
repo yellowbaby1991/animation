@@ -48,7 +48,49 @@ public class CustomViewPager extends ViewPager {
 ```
 4. 自定义PagerAdapter来显示名片细节
 ``` java
-enter code here
+class ViewPagerAdapter extends PagerAdapter {
+
+        @Override
+        public Object instantiateItem(ViewGroup container, int position) {
+            final Info info = mDatas.get(position);
+            View view = LayoutInflater.from(MainActivity.this).inflate(R.layout.viewpager_layout, null);
+            ImageView iv_protrait = (ImageView) view.findViewById(R.id.iv);
+            ImageView iv_sex = (ImageView) view.findViewById(R.id.iv_sex);
+            TextView tv_name = (TextView) view.findViewById(R.id.tv_name);
+            TextView tv_distance = (TextView) view.findViewById(R.id.tv_distance);
+            tv_name.setText(info.getName());
+            tv_distance.setText(info.getDistance() + "km");
+            iv_protrait.setImageResource(info.getPortraitId());
+            if (info.getSex()) {
+                iv_sex.setImageResource(R.drawable.girl);
+            } else {
+                iv_sex.setImageResource(R.drawable.boy);
+            }
+            iv_protrait.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(MainActivity.this, "这是 " + info.getName(), Toast.LENGTH_SHORT).show();
+                }
+            });
+            container.addView(view);
+            return view;
+        }
+
+        @Override
+        public int getCount() {
+            return mImgs.length;
+        }
+
+        @Override
+        public boolean isViewFromObject(View view, Object object) {
+            return view == object;
+        }
+
+        @Override
+        public void destroyItem(ViewGroup container, int position, Object object) {
+            View view = (View) object;
+            container.removeView(view);
+        }
 ```
 
 
