@@ -143,3 +143,5 @@ private void drawScan(Canvas canvas) {
         canvas.restore();
     }
 ```
+ 3. 阴影post一个线程让它转动起来
+
