@@ -145,3 +145,15 @@ private void drawScan(Canvas canvas) {
 ```
  3. 阴影post一个线程让它转动起来
 
+``` java
+private Runnable run = new Runnable() {
+        @Override
+        public void run() {
+            scanAngle = (scanAngle + scanSpeed) % 360;
+            matrix.postRotate(scanSpeed, mWidth / 2, mHeight / 2);
+            invalidate();
+            postDelayed(run, 130);
+            ...
+        }
+    };
+```
