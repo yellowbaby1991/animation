@@ -112,7 +112,14 @@ class ViewPagerAdapter extends PagerAdapter {
         canvas.drawCircle(mWidth / 2, mHeight / 2, mWidth * circleProportion[5], mPaintLine);
     }
 	
-	
+	private void init() {
+        mPaintLine = new Paint();
+        mPaintLine.setColor(getResources().getColor(R.color.line_color_blue));
+        mPaintLine.setAntiAlias(true);
+        mPaintLine.setStrokeWidth(1);
+        mPaintLine.setStyle(Paint.Style.STROKE);
+		...
+    }
 ```
 
 
