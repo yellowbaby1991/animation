@@ -175,3 +175,4 @@ private void drawCenterIcon(Canvas canvas) {
 
 
 ##### 雷达扫描出现的小圈
+ 1. 整体布局为，一个RadarViewGroup下一个雷达RadarView界面和若干个小圆圈CircleView，在RadarViewGroup中计算出雷达和圆圈的位置，然后分别layout
