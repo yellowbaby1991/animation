@@ -229,7 +229,6 @@ private void drawCenterIcon(Canvas canvas) {
     }
 ```
  3. 扫描完所有的点后优先显示距离最近的点，通过设置缩放度来突出小圆圈
-
 ``` java
 /**
      * 放大CircleView小圆点大小
@@ -242,6 +241,19 @@ private void drawCenterIcon(Canvas canvas) {
             object.setPortraitIcon(mDatas.get(position).getPortraitId());
             ObjectAnimator.ofFloat(object, "scaleX", 2f).setDuration(300).start();
             ObjectAnimator.ofFloat(object, "scaleY", 2f).setDuration(300).start();
+        }
+    }
+	
+	/**
+     * 恢复CircleView小圆点原大小
+     *
+     * @param object
+     */
+    private void resetAnim(CircleView object) {
+        if (object != null) {
+            object.clearPortaitIcon();
+            ObjectAnimator.ofFloat(object, "scaleX", 1f).setDuration(300).start();
+            ObjectAnimator.ofFloat(object, "scaleY", 1f).setDuration(300).start();
         }
     }
 ```
