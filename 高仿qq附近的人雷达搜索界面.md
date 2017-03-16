@@ -228,6 +228,4 @@ private void drawCenterIcon(Canvas canvas) {
         requestLayout();
     }
 ```
-
-
  3. 1
