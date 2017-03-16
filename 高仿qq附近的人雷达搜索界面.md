@@ -1,7 +1,10 @@
 ### 高仿qq附近的人雷达搜索界面
 #### 思路
 
- 1. 底部较为简单，使用一个ViewPager，将clipChildren属性设置为false即可，背景使用圆角drawable
+ - 底部名片
+	1. 整体使用一个自定义的ViewPager，主要是为了计算滑动速度
+		``` stylus
+		enter code here
+		```
 
 
- 2. 
