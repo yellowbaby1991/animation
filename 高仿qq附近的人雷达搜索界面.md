@@ -261,6 +261,5 @@ private void drawCenterIcon(Canvas canvas) {
 
 ##### 雷达和滚动名片的联动
 
-``` stylus
-enter code here
-```
+ 1. 点击雷达联动名片
+ 2. 
