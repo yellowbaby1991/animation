@@ -157,4 +157,18 @@ private Runnable run = new Runnable() {
     };
 ```
 
+4. 最后画之间的图标
+
+``` java
+private void drawCenterIcon(Canvas canvas) {
+        canvas.drawBitmap(centerBitmap, null,
+                new Rect(
+                        (int) (mWidth / 2 - mWidth * circleProportion[0]),
+                        (int) (mHeight / 2 - mWidth * circleProportion[0]),
+                        (int) (mWidth / 2 + mWidth * circleProportion[0]),
+                        (int) (mHeight / 2 + mWidth * circleProportion[0])
+                ), mPaintCircle);
+    }
+```
+
 
