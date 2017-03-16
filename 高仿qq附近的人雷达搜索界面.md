@@ -216,5 +216,19 @@ private void drawCenterIcon(Canvas canvas) {
         }
 ```
  2. 扫描过程中根据距离远近，计算出角度后requestLayout父布局
- 
+
+``` java
+@Override
+    public void onScanning(int postion, float scanAngle) {
+        if (scanAngle == 0) {
+            scanAngleList.put(postion, 1f);
+        } else {
+            scanAngleList.put(postion, scanAngle);
+        }
+        Log.d("TAG", scanAngle + " ");
+        requestLayout();
+    }
+```
+
+
  3. 1
