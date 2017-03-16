@@ -176,3 +176,43 @@ private void drawCenterIcon(Canvas canvas) {
 
 ##### 雷达扫描出现的小圈
  1. 整体布局为，一个RadarViewGroup下一个雷达RadarView界面和若干个小圆圈CircleView，在RadarViewGroup中计算出雷达和圆圈的位置，然后分别layout
+``` java
+@Override
+    protected void onLayout(boolean changed, int l, int t, int r, int b) {
+        int childCount = getChildCount();
+        View view = findViewById(R.id.id_scan_circle);
+        if (view != null) {
+            view.layout(0, 0, view.getMeasuredWidth(), view.getMeasuredHeight());
+        }
+        for (int i = 0; i < childCount; i++) {
+            final int j = i;
+            final View child = getChildAt(i);
+            if (child.getId() == R.id.id_scan_circle) {
+                continue;
+            }
+            //设置CircleView小圆点的坐标信息
+            //坐标 = 旋转角度 * 半径 * 根据远近距离的不同计算得到的应该占的半径比例
+            ((CircleView) child).setDisX((float) Math.cos(Math.toRadians(scanAngleList.get(i - 1) - 5))
+                    * ((CircleView) child).getProportion() * mWidth / 2);
+            ((CircleView) child).setDisY((float) Math.sin(Math.toRadians(scanAngleList.get(i - 1) - 5))
+                    * ((CircleView) child).getProportion() * mWidth / 2);
+            if (scanAngleList.get(i - 1) == 0) {
+                continue;
+            }
+            //放置Circle小圆点
+            child.layout((int) ((CircleView) child).getDisX() + mWidth / 2, (int) ((CircleView) child).getDisY() + mHeight / 2,
+                    (int) ((CircleView) child).getDisX() + child.getMeasuredWidth() + mWidth / 2,
+                    (int) ((CircleView) child).getDisY() + child.getMeasuredHeight() + mHeight / 2);
+
+            child.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    resetAnim(currentShowChild);
+                    currentShowChild = (CircleView) child;
+                    startAnim(currentShowChild, j - 1);
+                    iRadarClickListener.onRadarItemClick(j - 1);
+                }
+            });
+        }
+```
+ 2. 扫描过程中根据距离远近，计算出角度后requestLayout父布局，
