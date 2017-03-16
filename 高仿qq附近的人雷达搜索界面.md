@@ -122,5 +122,4 @@ class ViewPagerAdapter extends PagerAdapter {
     }
 ```
 
-
  2. 
