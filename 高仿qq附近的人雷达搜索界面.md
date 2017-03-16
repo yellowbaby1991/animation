@@ -27,9 +27,13 @@ public class CustomViewPager extends ViewPager {
 		}
 ```
 
-	2. 设置clipChildren属性使得可以在一页显示多个page
+2. 设置clipChildren属性使得可以在一页显示多个page
+
+``` javascript
 		``` java
 		enter code here
 		```
+```
+
 
 
