@@ -98,6 +98,6 @@ class ViewPagerAdapter extends PagerAdapter {
 
 
 
-##### 雷达界面的绘制
+##### 雷达界面
 
  1. 
