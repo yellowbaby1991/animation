@@ -263,6 +263,6 @@ private void drawCenterIcon(Canvas canvas) {
 
  1. 点击雷达联动名片
 
-``` stylus
+``` java
 enter code here
 ```
