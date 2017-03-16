@@ -157,7 +157,7 @@ private Runnable run = new Runnable() {
     };
 ```
 
-4. 最后画之间的图标
+4. 最后画中间的图标
 
 ``` java
 private void drawCenterIcon(Canvas canvas) {
