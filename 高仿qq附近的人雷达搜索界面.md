@@ -134,7 +134,6 @@ private void init() {
         mPaintScan.setStyle(Paint.Style.FILL_AND_STROKE);
     }
 
-
 private void drawScan(Canvas canvas) {
         canvas.save();//使用save和restore来避免对其他部件的影响
         mPaintScan.setShader(scanShader);
