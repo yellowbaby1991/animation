@@ -216,4 +216,5 @@ private void drawCenterIcon(Canvas canvas) {
         }
 ```
  2. 扫描过程中根据距离远近，计算出角度后requestLayout父布局
- 3. 
+ 
+ 3. 1
