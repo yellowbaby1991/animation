@@ -38,6 +38,7 @@ public class CustomViewPager extends ViewPager {
 	android:layout_marginRight="120dp"
 	android:clipChildren="false"></yellow.com.qqnearby.view.CustomViewPager>
 ```
-3. 设置clipChildren属性使得可以在一页显示多个page
+3. 自定义PagerAdapter显示每页具体的内容
+4. 
 
 
