@@ -2,7 +2,7 @@
 #### 思路
 
  - 底部名片
-	1. 整体使用一个自定义的ViewPager，主要是为了计算滑动速度
+	1. 整体使用一个自定义的ViewPager，使用自定义主要是为了计算滑动速度
 		``` java
 		public class CustomViewPager extends ViewPager {
 		...
@@ -25,5 +25,5 @@
 		...
 		}
 		```
-
+	2. 整体使用一个自定义的ViewPager，使用自定义主要是为了计算滑动速度
 
