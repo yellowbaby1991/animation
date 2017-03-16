@@ -279,4 +279,19 @@ protected void onLayout(boolean changed, int l, int t, int r, int b) {
     }
 ```
  2. 滑动名片联动雷达
- 
+``` java
+@Override
+    public void onPageSelected(int position) {
+        radarViewGroup.setCurrentShowItem(position);
+        if (viewPager.getSpeed() < -1800) {
+            viewPager.setCurrentItem(mPosition + 2);
+            viewPager.setSpeed(0);
+        } else if (viewPager.getSpeed() > 1800 && mPosition > 0) {
+            //当手指右滑速度大于2000时viewpager左滑（注意item-1即可）
+            viewPager.setCurrentItem(mPosition - 1);
+            viewPager.setSpeed(0);
+        }
+    }
+```
+
+
