@@ -101,4 +101,17 @@ class ViewPagerAdapter extends PagerAdapter {
 ##### 雷达界面
 
  1. 先画最外圈的5个白色线圈
+ 
+``` java
+ //画五个外围的圆线,五个圈的区别只有比例的不同而已
+    private void drawCircle(Canvas canvas) {
+        canvas.drawCircle(mWidth / 2, mHeight / 2, mWidth * circleProportion[1], mPaintLine);
+        canvas.drawCircle(mWidth / 2, mHeight / 2, mWidth * circleProportion[2], mPaintLine);
+        canvas.drawCircle(mWidth / 2, mHeight / 2, mWidth * circleProportion[3], mPaintLine);
+        canvas.drawCircle(mWidth / 2, mHeight / 2, mWidth * circleProportion[4], mPaintLine);
+        canvas.drawCircle(mWidth / 2, mHeight / 2, mWidth * circleProportion[5], mPaintLine);
+    }
+```
+
+
  2. 
