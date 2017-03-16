@@ -257,6 +257,4 @@ private void drawCenterIcon(Canvas canvas) {
         }
     }
 ```
-
-
  4. 
