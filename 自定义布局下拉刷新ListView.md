@@ -65,6 +65,5 @@
 </RelativeLayout>
 ```
 
-
  2. 自定义一个LinearLayout，命名RefreshableView，里面只包含了一个ListView
 
