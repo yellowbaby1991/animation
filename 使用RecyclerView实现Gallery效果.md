@@ -199,5 +199,4 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.ViewHold
 
 ```
 
-
  4. 1
