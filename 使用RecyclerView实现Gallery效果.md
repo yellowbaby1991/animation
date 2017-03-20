@@ -51,6 +51,74 @@
 </LinearLayout>
 ```
 
- 2. 自定义OnScrollListener监听，当滑动到新View的时候回调接口改变大图片
+ 2. 创建自定义MyRecyclerView，然后自定义OnScrollListener监听，当滑动到新View的时候回调接口改变大图片
  
+``` java
+package yellow.com.recyclerview;
+
+import android.content.Context;
+import android.support.annotation.Nullable;
+import android.support.v7.widget.RecyclerView;
+import android.util.AttributeSet;
+import android.view.View;
+
+public class MyRecyclerView extends RecyclerView {
+
+    private View mCurrentView;
+
+    private OnItemScrollChangeListener mItemScrollChangeListener;
+
+    public void setOnItemScrollChangeListener(
+            OnItemScrollChangeListener mItemScrollChangeListener) {
+        this.mItemScrollChangeListener = mItemScrollChangeListener;
+    }
+
+    public interface OnItemScrollChangeListener {
+        void onChange(View view, int position);
+    }
+
+    private OnScrollListener mOnScrollListener = new OnScrollListener() {
+        @Override
+        public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+            super.onScrollStateChanged(recyclerView, newState);
+        }
+
+        //只有当滑动到新图片的时候才回调接口
+        @Override
+        public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+            View newView = getChildAt(0);
+            if (newView != null && newView != mCurrentView){
+                mCurrentView = newView;
+                mItemScrollChangeListener.onChange(mCurrentView, getChildPosition(mCurrentView));
+            }
+        }
+    };
+
+    public MyRecyclerView(Context context) {
+        this(context, null);
+    }
+
+    public MyRecyclerView(Context context, @Nullable AttributeSet attrs) {
+        this(context, attrs, 0);
+    }
+
+    public MyRecyclerView(Context context, @Nullable AttributeSet attrs, int defStyle) {
+        super(context, attrs, defStyle);
+        this.setOnScrollListener(mOnScrollListener);
+    }
+
+    //在滑动的时候回调监听接口
+    @Override
+    protected void onLayout(boolean changed, int l, int t, int r, int b) {
+        super.onLayout(changed, l, t, r, b);
+        mCurrentView = getChildAt(0);
+        if (mItemScrollChangeListener != null) {
+            mItemScrollChangeListener.onChange(mCurrentView, getChildPosition(mCurrentView));
+        }
+    }
+
+}
+
+```
+
  3. 1
