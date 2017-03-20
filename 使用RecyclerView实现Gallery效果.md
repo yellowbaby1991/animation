@@ -16,6 +16,6 @@
 
 #### Gallery效果思路
 
- 1. 布局为一个FrameLayout + RecyclerView的垂直布局
+ 1. 布局为一个FrameLayout（大图片） + RecyclerView（图片列表）的垂直布局
  
  2. 1
