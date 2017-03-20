@@ -123,7 +123,6 @@ public class MyRecyclerView extends RecyclerView {
 
  3. 创建适配器
  
-
 ``` java
 package yellow.com.recyclerview;
 
