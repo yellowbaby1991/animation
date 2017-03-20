@@ -14,3 +14,8 @@
 	 - 创建一个类ViewHolder继承RecyclerView.ViewHolder
 	 - 重写适配器中的方法
 
+#### Gallery效果思路
+
+ 1. 布局为一个FrameLayout + RecyclerView的垂直布局
+ 
+ 2. 1
