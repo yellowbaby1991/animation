@@ -9,3 +9,7 @@
 
  1. xm中进行定义，和ListView一样
  2. 设置LayoutManager进行布局，有三种布局方式，线性布局，网格布局，瀑布流布局
+ 3. 创建适配器
+	 - 继承RecyclerView.Adapter
+	 - 创建一个类ViewHolder继承RecyclerView.ViewHolder
+	 - 
