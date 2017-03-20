@@ -5,6 +5,6 @@
  2. RecyclerView本身不关心任何View，只负责回收和重用，所有的东西都给了一些插件化的类来处理，需要新布局，使用另一个LayoutManager，需要新动画，使用另一个ItemAnimator
  3. 没有onItemClickListener，全部交给用户来进行自定义操作
 
-#### 思路
+#### 使用方法
 
  1. 
