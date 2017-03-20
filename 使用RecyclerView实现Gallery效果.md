@@ -12,4 +12,5 @@
  3. 创建适配器
 	 - 继承RecyclerView.Adapter
 	 - 创建一个类ViewHolder继承RecyclerView.ViewHolder
-	 - 
+	 - 重写适配器中的方法
+
