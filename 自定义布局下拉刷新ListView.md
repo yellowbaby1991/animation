@@ -65,6 +65,31 @@
 </RelativeLayout>
 ```
 
- 2. 自定义一个LinearLayout，命名RefreshableView，里面只包含了一个ListView，刷新头在构造方法中addView
- 3. 
+ 2. 自定义一个LinearLayout，命名RefreshableView，里面只包含了一个ListView，刷新头在构造方法中addView，所以整体布局就很简洁了
+ 
+``` xml
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="yellow.com.pulltorefresh.MainActivity">
+
+    <yellow.com.pulltorefresh.RefreshableView
+        android:id="@+id/refreshable_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+        </ListView>
+    </yellow.com.pulltorefresh.RefreshableView>
+</RelativeLayout>
+
+```
+
+
+ 
 
