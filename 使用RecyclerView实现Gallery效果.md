@@ -199,4 +199,4 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.ViewHold
 
 ```
 
- 4. 1
+ 4. 在MainActivity中设置布局管理器，数据源和适配器
