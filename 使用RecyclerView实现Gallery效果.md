@@ -51,4 +51,6 @@
 </LinearLayout>
 ```
 
- 2. 1
+ 2. 自定义OnScrollListener监听，当滑动到新View的时候回调接口改变大图片
+ 
+ 3. 1
