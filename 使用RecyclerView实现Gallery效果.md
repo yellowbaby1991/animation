@@ -17,5 +17,38 @@
 #### Gallery效果思路
 
  1. 布局为一个FrameLayout（大图片） + RecyclerView（图片列表）的垂直布局
- 
+
+``` xml
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/id_content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher" />
+    </FrameLayout>
+
+    <yellow.com.recyclerview.MyRecyclerView
+        android:id="@+id/id_recyclerview_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_centerVertical="true"
+        android:background="#FF0000"
+        android:scrollbars="none" />
+
+</LinearLayout>
+```
+
  2. 1
