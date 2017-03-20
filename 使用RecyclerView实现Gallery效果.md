@@ -1,3 +1,8 @@
+* [RecyclerView简介](#recyclerview简介)
+* [使用方法](#使用方法)
+* [Gallery效果思路](#gallery效果思路)
+* [效果](#效果)
+
 ### 使用RecyclerView实现Gallery效果
 #### RecyclerView简介
 
